@@ -25,7 +25,7 @@ public class JuegosDeTodo {
         switch (opcion) {
             case 1:
                 System.out.println("Las damas");
-                
+                JuegoDamas
                 break;
             case 2:
                 System.out.println("Las tateti");

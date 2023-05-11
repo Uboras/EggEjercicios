@@ -20,7 +20,7 @@ public class RaicesServicio {
             a=leer.nextDouble() ;
            }while(a==0);
         System.out.println("segundo");
-        double b=leer.nextDouble();
+      double b =leer.nextDouble();
         System.out.println("tercero");
         double c =leer.nextDouble();
         Raices lp = new Raices(a,b, c);
