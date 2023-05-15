@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -25,7 +26,7 @@ public class CadenaServicio {
             }
             vector[i] = vocal;
         }
-        
+
         for (int i = 0; i < 5; i++) {
             if (vector[i] > 0) {
                 System.out.println("La vocal " + vocales.charAt(i) + " se encontro: " + vector[i]);
@@ -82,11 +83,11 @@ public class CadenaServicio {
 
     public void invertirFrase(Cadena usu) {
         String invertida = "";
-      
-        for (int i = (usu.getLongitud()-1); i >-1; i--) {
-            char letra = (char)usu.getFrase().charAt(i);
 
-            invertida +=  letra;
+        for (int i = (usu.getLongitud() - 1); i > -1; i--) {
+            char letra = (char) usu.getFrase().charAt(i);
+
+            invertida += letra;
 
         }
         System.out.println(invertida);
@@ -108,4 +109,31 @@ public class CadenaServicio {
         }
         System.out.println(frase + " !");
     }
+
+    public void unirFrases(Cadena usu, String frase) {
+        StringBuilder nueva = new StringBuilder();
+        nueva.append(usu.getFrase());
+        nueva.append(" ");
+        nueva.append(frase);
+        System.out.println(nueva);
+
+    }
+public void compararLongitud(Cadena usu, String frase){
+    if(usu.getLongitud() == frase.length()){
+        System.out.println("tiene la misma cantidad de caracteres");
+        
+    }else{ System.out.println("tienen diferente cantidad de letras");}
+    
 }
+
+public void buscadorLetras(Cadena usu){
+    
+    Scanner ls = new Scanner (System.in);
+    System.out.println("ingrrese el daot a buscar");
+    char busc = (char)ls.nextLine().charAt(0);
+if (usu.getFrase().contains(Character.toString(busc)));
+
+    System.out.println("se encontro en la palabra el caracter: "+busc);
+    }
+}
+

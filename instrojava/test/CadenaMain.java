@@ -16,10 +16,12 @@ public class CadenaMain {
     public static void main(String[] args) {
       CadenaServicio cs =new CadenaServicio();
       Cadena cad = new Cadena("casa blanca");
-      
+      String frase="Alamaula";
       cs.mostrarVocales2(cad);
       cs.invertirFrase(cad);
       cs.Remplazar(cad);
+    cs.compararLongitud(cad, frase);
+    cs.buscadorLetras(cad);
     }
     
 }
