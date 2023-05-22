@@ -1,6 +1,7 @@
 package entidades;
 
 
+import entidades.cuentaBancaria;
 import java.util.Scanner;
 
 /*
