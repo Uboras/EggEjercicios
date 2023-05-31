@@ -9,7 +9,7 @@ package apppara.olymptrade;
  *
  * @author Herna
  */
-public class AppPäraOlymptrade {
+public class raOlymptrade {
 
     /**
      * @param args the command line arguments
