@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="TradingChomeIqOption">
+  <ClassDiagramComponents>
+    <Class name="Ordenador" package="appoperadordetxt" visibility="public" xPosition="92.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="ejecutarOrdenes" returnType="void" visibility="public">
+          <Argument type="String" name="rutaArchivo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GestorSeñales" package="EjecutordeSeñal" visibility="public" xPosition="92.0" yPosition="167.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="ubicacionmouseCompra" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Senales" name="senal"/>
+        </Method>
+        <Method name="ubicacionmouseventa" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Senales" name="senal"/>
+        </Method>
+        <Method name="horario" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Senales" name="senal"/>
+        </Method>
+        <Method name="minduracion" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="duracion"/>
+        </Method>
+        <Method name="compraOventa" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Senales" name="senal"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MouseyTeclado" package="Entidades" visibility="public" xPosition="738.0" yPosition="328.0">
+      <Fields>
+        <Field name="alto" type="int" visibility="private" isFinal="true"/>
+        <Field name="ancho" type="int" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getAlto" returnType="int" visibility="public"/>
+        <Method name="setAlto" returnType="int" visibility="public" isFinal="true"/>
+        <Method name="getAncho" returnType="int" visibility="public"/>
+        <Method name="setAncho" returnType="int" visibility="public" isFinal="true"/>
+        <Method name="CalcularAltoAnchopatalla" returnType="void" visibility="public"/>
+        <Method name="Movermouse" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+        </Method>
+        <Method name="teclado" returnType="void" visibility="public">
+          <Argument type="String" name="texto"/>
+        </Method>
+        <Method name="delay" returnType="void" visibility="public">
+          <Argument type="int" name="sec"/>
+        </Method>
+        <Method name="abrirChrome" returnType="void" visibility="public"/>
+        <Method name="ingresarElPar" returnType="void" visibility="public">
+          <Argument type="String" name="par"/>
+        </Method>
+        <Method name="BotonCompra" returnType="void" visibility="public"/>
+        <Method name="BotonVenta" returnType="void" visibility="public"/>
+        <Method name="Duracion5min" returnType="void" visibility="public"/>
+        <Method name="Duracion15min" returnType="void" visibility="public"/>
+        <Method name="Duracion1min" returnType="void" visibility="public"/>
+        <Method name="Mensajes" returnType="void" visibility="public">
+          <Argument type="String" name="texto"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Senales" package="Entidades" visibility="public" xPosition="166.0" yPosition="437.0">
+      <Fields>
+        <Field name="fechaInicio" type="LocalTime" visibility="private"/>
+        <Field name="pares" type="String" visibility="private"/>
+        <Field name="operacion" type="String" visibility="private"/>
+        <Field name="duracion" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="LocalTime" name="fechaInicio"/>
+          <Argument type="String" name="pares"/>
+          <Argument type="String" name="operacion"/>
+          <Argument type="Integer" name="duracion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFechaInicio" returnType="LocalTime" visibility="public"/>
+        <Method name="setFechaInicio" returnType="void" visibility="public">
+          <Argument type="LocalTime" name="fechaInicio"/>
+        </Method>
+        <Method name="getPares" returnType="String" visibility="public"/>
+        <Method name="setPares" returnType="void" visibility="public">
+          <Argument type="String" name="pares"/>
+        </Method>
+        <Method name="getOperacion" returnType="String" visibility="public"/>
+        <Method name="setOperacion" returnType="void" visibility="public">
+          <Argument type="String" name="operacion"/>
+        </Method>
+        <Method name="getDuracion" returnType="Integer" visibility="public"/>
+        <Method name="setDuracion" returnType="void" visibility="public">
+          <Argument type="Integer" name="duracion"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="lectordeArchivos" package="Main" visibility="public" xPosition="425.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="EjecutordeSeñal.GestorSeñales" target="Entidades.Senales" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

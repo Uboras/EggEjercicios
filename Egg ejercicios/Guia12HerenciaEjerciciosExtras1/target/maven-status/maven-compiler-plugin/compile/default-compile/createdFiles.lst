@@ -1,0 +1,8 @@
+Entidades\BarcosMotor.class
+Entidades\Barco.class
+Entidades\Yates.class
+Entidades\Puerto.class
+Servicio\ServicioAmarres.class
+Main\AmarreDeBarcosMain.class
+Entidades\Amarre.class
+Entidades\Velero.class
